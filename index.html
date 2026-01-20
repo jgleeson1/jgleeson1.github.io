@@ -1,61 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Joseph Gleeson | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Joseph Gleeson</h1>
-    <p>Information Systems Management Student | Auburn University</p>
-  </header>
-
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am an Information Systems Management student at Auburn University with
-      experience in IT support, business systems, and data-focused projects.
-    </p>
-  </section>
-
-  <section>
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Budget Projection Workbook</h3>
-      <p>
-        Built an Excel-based budgeting and financial projection model for a small
-        business to track income, expenses, and cash flow.
-      </p>
+  <nav class="nav">
+    <a class="nav__brand" href="#top">JG</a>
+    <div class="nav__links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
     </div>
+  </nav>
 
-    <div class="project">
-      <h3>Student Grade Calculator</h3>
+  <main class="container" id="top">
+
+    <header class="hero">
+      <div>
+        <h1>Joseph Gleeson</h1>
+        <p class="hero__subtitle">Information Systems Management Student · Auburn University</p>
+        <p class="hero__blurb">
+          I build practical solutions with a focus on IT support, business systems, and data-driven work.
+        </p>
+
+        <div class="hero__buttons">
+          <a class="btn btn--primary" href="assets/resume.pdf" target="_blank" rel="noopener">View Resume</a>
+          <a class="btn btn--ghost" href="#projects">See Projects</a>
+        </div>
+
+        <div class="hero__links">
+          <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener">GitHub</a>
+          <span>·</span>
+          <a href="https://www.linkedin.com/in/YOURLINKEDIN/" target="_blank" rel="noopener">LinkedIn</a>
+          <span>·</span>
+          <a href="mailto:YOUREMAIL@domain.com">Email</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="about" class="section">
+      <h2>About</h2>
       <p>
-        Program that calculates student averages and letter grades using
-        structured logic and user input.
+        I’m an Information Systems Management student at Auburn University with experience supporting users,
+        working with business systems, and building projects that improve how information is tracked and reported.
+        I’m interested in internships and roles in IT, systems, and analytics.
       </p>
-    </div>
 
-  </section>
+      <div class="chips">
+        <span class="chip">Excel</span>
+        <span class="chip">SQL</span>
+        <span class="chip">Python</span>
+        <span class="chip">C#</span>
+        <span class="chip">IT Support</span>
+        <span class="chip">Data Analysis</span>
+      </div>
+    </section>
 
-  <section>
-    <h2>Resume</h2>
-    <p>
-      <a href="assets/resume.pdf" target="_blank">Download my resume (PDF)</a>
-    </p>
-  </section>
+    <section id="projects" class="section">
+      <div class="section__header">
+        <h2>Projects</h2>
+        <p class="muted">A few things I’ve built recently.</p>
+      </div>
 
-  <section>
-    <h2>Contact</h2>
-    <p>
-      Email: yourname@email.com <br>
-      GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a><br>
-      LinkedIn: <a href="#">LinkedIn Profile</a>
-    </p>
-  </section>
+      <div class="grid">
+        <article class="card">
+          <div class="card__top">
+            <h3>Budget Projection Workbook</h3>
+            <span class="tag">Excel</span>
+          </div>
+          <p>
+            Built a budgeting and financial projection model to track income, expenses, and cash flow.
+          </p>
+          <ul class="bullets">
+            <li>Structured categories and monthly views for clarity</li>
+            <li>Simple inputs with calculated totals and summaries</li>
+          </ul>
+          <div class="card__links">
+            <a href="#" target="_blank" rel="noopener">Case Study</a>
+            <a href="#" target="_blank" rel="noopener">Files</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__top">
+            <h3>Student Grade Calculator</h3>
+            <span class="tag">Python</span>
+          </div>
+          <p>
+            Program that calculates student averages and letter grades using structured logic and user input.
+          </p>
+          <ul class="bullets">
+            <li>Validates inputs and summarizes results</li>
+            <li>Designed to be readable and easy to extend</li>
+          </ul>
+          <div class="card__links">
+            <a href="#" target="_blank" rel="noopener">GitHub Repo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="resume" class="section">
+      <h2>Resume</h2>
+      <div class="resumeBox">
+        <p class="muted">PDF version:</p>
+        <a class="btn btn--primary" href="assets/resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="contact">
+        <div class="contact__item">
+          <p class="muted">Email</p>
+          <a href="mailto:YOUREMAIL@domain.com">YOUREMAIL@domain.com</a>
+        </div>
+        <div class="contact__item">
+          <p class="muted">GitHub</p>
+          <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener">github.com/YOURUSERNAME</a>
+        </div>
+        <div class="contact__item">
+          <p class="muted">LinkedIn</p>
+          <a href="https://www.linkedin.com/in/YOURLINKEDIN/" target="_blank" rel="noopener">linkedin.com/in/YOURLINKEDIN</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="muted">© <span id="year"></span> Joseph Gleeson</p>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
