@@ -38,6 +38,16 @@ body{
   color: var(--text);
   line-height: 1.6;
 }
+body{
+  background:
+    linear-gradient(
+      rgba(246,247,251,0.9),
+      rgba(246,247,251,0.9)
+    ),
+    url("assets/images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 a{
   color: inherit;
